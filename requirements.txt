@@ -1,0 +1,2 @@
+torch
+torchvision>=0.9.0
