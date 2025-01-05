@@ -1,0 +1,776 @@
+{
+    "last_node_id": 41,
+    "last_link_id": 87,
+    "nodes": [
+        {
+            "id": 32,
+            "type": "VHS_VideoCombine",
+            "pos": [
+                1102.6697998046875,
+                61.50947952270508
+            ],
+            "size": [
+                215.4166717529297,
+                306
+            ],
+            "flags": {},
+            "order": 8,
+            "mode": 0,
+            "inputs": [
+                {
+                    "name": "images",
+                    "type": "IMAGE",
+                    "link": 77,
+                    "localized_name": "images"
+                },
+                {
+                    "name": "audio",
+                    "type": "AUDIO",
+                    "link": null,
+                    "shape": 7,
+                    "localized_name": "audio"
+                },
+                {
+                    "name": "meta_batch",
+                    "type": "VHS_BatchManager",
+                    "link": null,
+                    "shape": 7,
+                    "localized_name": "meta_batch"
+                },
+                {
+                    "name": "vae",
+                    "type": "VAE",
+                    "link": null,
+                    "shape": 7,
+                    "localized_name": "vae"
+                },
+                {
+                    "name": "frame_rate",
+                    "type": "FLOAT",
+                    "link": 72,
+                    "widget": {
+                        "name": "frame_rate"
+                    }
+                }
+            ],
+            "outputs": [
+                {
+                    "name": "Filenames",
+                    "type": "VHS_FILENAMES",
+                    "links": null,
+                    "localized_name": "Filenames"
+                }
+            ],
+            "properties": {
+                "Node name for S&R": "VHS_VideoCombine"
+            },
+            "widgets_values": {
+                "frame_rate": 8,
+                "loop_count": 0,
+                "filename_prefix": "EvTexture",
+                "format": "video/h264-mp4",
+                "pix_fmt": "yuv420p",
+                "crf": 17,
+                "save_metadata": true,
+                "pingpong": false,
+                "save_output": true,
+                "videopreview": {
+                    "hidden": false,
+                    "paused": false,
+                    "params": {
+                        "filename": "EvTexture_00002.mp4",
+                        "subfolder": "",
+                        "type": "output",
+                        "format": "video/h264-mp4",
+                        "frame_rate": 25
+                    },
+                    "muted": false
+                }
+            }
+        },
+        {
+            "id": 5,
+            "type": "VHS_VideoCombine",
+            "pos": [
+                622.8643798828125,
+                63.0435791015625
+            ],
+            "size": [
+                215.4166717529297,
+                306
+            ],
+            "flags": {},
+            "order": 9,
+            "mode": 0,
+            "inputs": [
+                {
+                    "name": "images",
+                    "type": "IMAGE",
+                    "link": 86,
+                    "localized_name": "images"
+                },
+                {
+                    "name": "audio",
+                    "type": "AUDIO",
+                    "link": null,
+                    "shape": 7,
+                    "localized_name": "audio"
+                },
+                {
+                    "name": "meta_batch",
+                    "type": "VHS_BatchManager",
+                    "link": null,
+                    "shape": 7,
+                    "localized_name": "meta_batch"
+                },
+                {
+                    "name": "vae",
+                    "type": "VAE",
+                    "link": null,
+                    "shape": 7,
+                    "localized_name": "vae"
+                },
+                {
+                    "name": "frame_rate",
+                    "type": "FLOAT",
+                    "link": 65,
+                    "widget": {
+                        "name": "frame_rate"
+                    }
+                }
+            ],
+            "outputs": [
+                {
+                    "name": "Filenames",
+                    "type": "VHS_FILENAMES",
+                    "links": null,
+                    "localized_name": "Filenames"
+                }
+            ],
+            "properties": {
+                "Node name for S&R": "VHS_VideoCombine"
+            },
+            "widgets_values": {
+                "frame_rate": 8,
+                "loop_count": 0,
+                "filename_prefix": "EvTexture",
+                "format": "video/h264-mp4",
+                "pix_fmt": "yuv420p",
+                "crf": 17,
+                "save_metadata": true,
+                "pingpong": false,
+                "save_output": false,
+                "videopreview": {
+                    "hidden": false,
+                    "paused": false,
+                    "params": {
+                        "filename": "EvTexture_00001.mp4",
+                        "subfolder": "",
+                        "type": "temp",
+                        "format": "video/h264-mp4",
+                        "frame_rate": 25
+                    },
+                    "muted": false
+                }
+            }
+        },
+        {
+            "id": 39,
+            "type": "EVTTextureUpscaleVideo",
+            "pos": [
+                999.4920043945312,
+                -122.35371398925781
+            ],
+            "size": [
+                315,
+                98
+            ],
+            "flags": {},
+            "order": 6,
+            "mode": 0,
+            "inputs": [
+                {
+                    "name": "images",
+                    "type": "IMAGE",
+                    "link": 87,
+                    "localized_name": "images"
+                },
+                {
+                    "name": "events",
+                    "type": "EVT_EVENTS",
+                    "link": 82,
+                    "localized_name": "events"
+                },
+                {
+                    "name": "model",
+                    "type": "EVTEXTURE_MODEL",
+                    "link": 75,
+                    "localized_name": "model"
+                },
+                {
+                    "name": "fps",
+                    "type": "FLOAT",
+                    "link": 76,
+                    "widget": {
+                        "name": "fps"
+                    }
+                }
+            ],
+            "outputs": [
+                {
+                    "name": "images",
+                    "type": "IMAGE",
+                    "links": [
+                        77
+                    ],
+                    "slot_index": 0,
+                    "localized_name": "images"
+                }
+            ],
+            "properties": {
+                "Node name for S&R": "EVTTextureUpscaleVideo"
+            },
+            "widgets_values": [
+                0
+            ]
+        },
+        {
+            "id": 36,
+            "type": "FloatConstant",
+            "pos": [
+                300,
+                80
+            ],
+            "size": [
+                210,
+                58
+            ],
+            "flags": {},
+            "order": 0,
+            "mode": 0,
+            "inputs": [],
+            "outputs": [
+                {
+                    "name": "value",
+                    "type": "FLOAT",
+                    "links": [
+                        65,
+                        71,
+                        72,
+                        76,
+                        80
+                    ],
+                    "slot_index": 0,
+                    "localized_name": "value"
+                }
+            ],
+            "properties": {
+                "Node name for S&R": "FloatConstant"
+            },
+            "widgets_values": [
+                25
+            ],
+            "color": "#232",
+            "bgcolor": "#353"
+        },
+        {
+            "id": 37,
+            "type": "GetImageSizeAndCount",
+            "pos": [
+                220,
+                190
+            ],
+            "size": [
+                277.20001220703125,
+                86
+            ],
+            "flags": {},
+            "order": 3,
+            "mode": 0,
+            "inputs": [
+                {
+                    "name": "image",
+                    "type": "IMAGE",
+                    "link": 66,
+                    "localized_name": "image"
+                }
+            ],
+            "outputs": [
+                {
+                    "name": "image",
+                    "type": "IMAGE",
+                    "links": null,
+                    "localized_name": "image"
+                },
+                {
+                    "name": "width",
+                    "type": "INT",
+                    "links": [
+                        84
+                    ],
+                    "slot_index": 1,
+                    "localized_name": "width"
+                },
+                {
+                    "name": "height",
+                    "type": "INT",
+                    "links": [
+                        85
+                    ],
+                    "slot_index": 2,
+                    "localized_name": "height"
+                },
+                {
+                    "name": "count",
+                    "type": "INT",
+                    "links": null,
+                    "localized_name": "count"
+                }
+            ],
+            "properties": {
+                "Node name for S&R": "GetImageSizeAndCount"
+            },
+            "widgets_values": []
+        },
+        {
+            "id": 40,
+            "type": "EVTEventsToImage",
+            "pos": [
+                595.6532592773438,
+                -72.1197280883789
+            ],
+            "size": [
+                315,
+                82
+            ],
+            "flags": {},
+            "order": 7,
+            "mode": 0,
+            "inputs": [
+                {
+                    "name": "events",
+                    "type": "EVT_EVENTS",
+                    "link": 83,
+                    "localized_name": "events"
+                },
+                {
+                    "name": "width",
+                    "type": "INT",
+                    "link": 84,
+                    "widget": {
+                        "name": "width"
+                    }
+                },
+                {
+                    "name": "height",
+                    "type": "INT",
+                    "link": 85,
+                    "widget": {
+                        "name": "height"
+                    }
+                }
+            ],
+            "outputs": [
+                {
+                    "name": "images",
+                    "type": "IMAGE",
+                    "links": [
+                        86
+                    ],
+                    "slot_index": 0,
+                    "localized_name": "images"
+                }
+            ],
+            "properties": {
+                "Node name for S&R": "EVTEventsToImage"
+            },
+            "widgets_values": [
+                0,
+                0
+            ]
+        },
+        {
+            "id": 41,
+            "type": "EVTVideoToEvents",
+            "pos": [
+                591.7122192382812,
+                -180.4667510986328
+            ],
+            "size": [
+                315,
+                58
+            ],
+            "flags": {},
+            "order": 5,
+            "mode": 0,
+            "inputs": [
+                {
+                    "name": "images",
+                    "type": "IMAGE",
+                    "link": 79,
+                    "localized_name": "images"
+                },
+                {
+                    "name": "fps",
+                    "type": "FLOAT",
+                    "link": 80,
+                    "widget": {
+                        "name": "fps"
+                    }
+                }
+            ],
+            "outputs": [
+                {
+                    "name": "events",
+                    "type": "EVT_EVENTS",
+                    "links": [
+                        82,
+                        83
+                    ],
+                    "slot_index": 0,
+                    "localized_name": "events"
+                }
+            ],
+            "properties": {
+                "Node name for S&R": "EVTVideoToEvents"
+            },
+            "widgets_values": [
+                0
+            ]
+        },
+        {
+            "id": 38,
+            "type": "EVTLoadEvTextureModel",
+            "pos": [
+                595.6519165039062,
+                -295.70843505859375
+            ],
+            "size": [
+                315,
+                58
+            ],
+            "flags": {},
+            "order": 1,
+            "mode": 0,
+            "inputs": [],
+            "outputs": [
+                {
+                    "name": "model",
+                    "type": "EVTEXTURE_MODEL",
+                    "links": [
+                        75
+                    ],
+                    "slot_index": 0,
+                    "localized_name": "model"
+                }
+            ],
+            "properties": {
+                "Node name for S&R": "EVTLoadEvTextureModel"
+            },
+            "widgets_values": [
+                "EvTexture_Vimeo90K_BIx4.pth"
+            ]
+        },
+        {
+            "id": 29,
+            "type": "VHS_VideoCombine",
+            "pos": [
+                862.5552978515625,
+                61.92683410644531
+            ],
+            "size": [
+                215.4166717529297,
+                306
+            ],
+            "flags": {},
+            "order": 4,
+            "mode": 0,
+            "inputs": [
+                {
+                    "name": "images",
+                    "type": "IMAGE",
+                    "link": 73,
+                    "localized_name": "images"
+                },
+                {
+                    "name": "audio",
+                    "type": "AUDIO",
+                    "link": null,
+                    "shape": 7,
+                    "localized_name": "audio"
+                },
+                {
+                    "name": "meta_batch",
+                    "type": "VHS_BatchManager",
+                    "link": null,
+                    "shape": 7,
+                    "localized_name": "meta_batch"
+                },
+                {
+                    "name": "vae",
+                    "type": "VAE",
+                    "link": null,
+                    "shape": 7,
+                    "localized_name": "vae"
+                },
+                {
+                    "name": "frame_rate",
+                    "type": "FLOAT",
+                    "link": 71,
+                    "widget": {
+                        "name": "frame_rate"
+                    }
+                }
+            ],
+            "outputs": [
+                {
+                    "name": "Filenames",
+                    "type": "VHS_FILENAMES",
+                    "links": null,
+                    "localized_name": "Filenames"
+                }
+            ],
+            "properties": {
+                "Node name for S&R": "VHS_VideoCombine"
+            },
+            "widgets_values": {
+                "frame_rate": 8,
+                "loop_count": 0,
+                "filename_prefix": "EvTexture",
+                "format": "video/h264-mp4",
+                "pix_fmt": "yuv420p",
+                "crf": 17,
+                "save_metadata": true,
+                "pingpong": false,
+                "save_output": true,
+                "videopreview": {
+                    "hidden": false,
+                    "paused": false,
+                    "params": {
+                        "filename": "EvTexture_00001.mp4",
+                        "subfolder": "",
+                        "type": "output",
+                        "format": "video/h264-mp4",
+                        "frame_rate": 25
+                    },
+                    "muted": false
+                }
+            }
+        },
+        {
+            "id": 33,
+            "type": "VHS_LoadImagesPath",
+            "pos": [
+                300,
+                -160
+            ],
+            "size": [
+                243.4166717529297,
+                194
+            ],
+            "flags": {},
+            "order": 2,
+            "mode": 0,
+            "inputs": [
+                {
+                    "name": "meta_batch",
+                    "type": "VHS_BatchManager",
+                    "link": null,
+                    "shape": 7,
+                    "localized_name": "meta_batch"
+                }
+            ],
+            "outputs": [
+                {
+                    "name": "IMAGE",
+                    "type": "IMAGE",
+                    "links": [
+                        66,
+                        73,
+                        79,
+                        87
+                    ],
+                    "slot_index": 0,
+                    "localized_name": "IMAGE"
+                },
+                {
+                    "name": "MASK",
+                    "type": "MASK",
+                    "links": null,
+                    "localized_name": "MASK"
+                },
+                {
+                    "name": "frame_count",
+                    "type": "INT",
+                    "links": null,
+                    "localized_name": "frame_count"
+                }
+            ],
+            "properties": {
+                "Node name for S&R": "VHS_LoadImagesPath"
+            },
+            "widgets_values": {
+                "directory": "test_blur_bicubic\\X4\\012",
+                "image_load_cap": 50,
+                "skip_first_images": 0,
+                "select_every_nth": 1,
+                "choose folder to upload": "image",
+                "videopreview": {
+                    "hidden": false,
+                    "paused": false,
+                    "params": {
+                        "frame_load_cap": 50,
+                        "skip_first_images": 0,
+                        "select_every_nth": 1,
+                        "filename": "test_blur_bicubic\\X4\\012",
+                        "type": "path",
+                        "format": "folder"
+                    },
+                    "muted": false
+                }
+            }
+        }
+    ],
+    "links": [
+        [
+            65,
+            36,
+            0,
+            5,
+            4,
+            "FLOAT"
+        ],
+        [
+            66,
+            33,
+            0,
+            37,
+            0,
+            "IMAGE"
+        ],
+        [
+            71,
+            36,
+            0,
+            29,
+            4,
+            "FLOAT"
+        ],
+        [
+            72,
+            36,
+            0,
+            32,
+            4,
+            "FLOAT"
+        ],
+        [
+            73,
+            33,
+            0,
+            29,
+            0,
+            "IMAGE"
+        ],
+        [
+            75,
+            38,
+            0,
+            39,
+            2,
+            "EVTEXTURE_MODEL"
+        ],
+        [
+            76,
+            36,
+            0,
+            39,
+            3,
+            "FLOAT"
+        ],
+        [
+            77,
+            39,
+            0,
+            32,
+            0,
+            "IMAGE"
+        ],
+        [
+            79,
+            33,
+            0,
+            41,
+            0,
+            "IMAGE"
+        ],
+        [
+            80,
+            36,
+            0,
+            41,
+            1,
+            "FLOAT"
+        ],
+        [
+            82,
+            41,
+            0,
+            39,
+            1,
+            "EV_EVENTS"
+        ],
+        [
+            83,
+            41,
+            0,
+            40,
+            0,
+            "EV_EVENTS"
+        ],
+        [
+            84,
+            37,
+            1,
+            40,
+            1,
+            "INT"
+        ],
+        [
+            85,
+            37,
+            2,
+            40,
+            2,
+            "INT"
+        ],
+        [
+            86,
+            40,
+            0,
+            5,
+            0,
+            "IMAGE"
+        ],
+        [
+            87,
+            33,
+            0,
+            39,
+            0,
+            "IMAGE"
+        ]
+    ],
+    "groups": [],
+    "config": {},
+    "extra": {
+        "ds": {
+            "scale": 0.922959981770651,
+            "offset": [
+                208.81684358794087,
+                234.82688825371258
+            ]
+        }
+    },
+    "version": 0.4
+}
